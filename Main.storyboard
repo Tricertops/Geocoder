@@ -18,6 +18,10 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMJ-S5-PGF">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3z1-fz-LFF" appends="YES" id="mNg-BG-WUo"/>
+                                </connections>
                             </mapView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-Iu-ZS6">
                                 <rect key="frame" x="0.0" y="420" width="600" height="180"/>
@@ -45,6 +49,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3z1-fz-LFF">
+                    <connections>
+                        <action selector="handleTap:" destination="vXZ-lx-hvc" id="eG9-FW-Gi6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
         <!--Placemark View Controller-->

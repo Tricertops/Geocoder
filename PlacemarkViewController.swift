@@ -27,11 +27,19 @@ class PlacemarkViewController: UITableViewController {
     
     func updateLabels() {
         if let placemark = self.placemark {
-            let join = " "
             countryLabel.text = placemark.country
-            administrationLabel.text = placemark.administrativeArea + join + placemark.subAdministrativeArea
-            localityLabel.text = placemark.locality + join + placemark.subLocality
-            thoroughfareLabel.text = placemark.thoroughfare + join + placemark.subThoroughfare
+            administrationLabel.text = placemark.administrativeArea
+            if let sub = placemark.subAdministrativeArea {
+                administrationLabel.text = "\(administrationLabel.text), \(sub)"
+            }
+            localityLabel.text = placemark.locality
+            if let sub = placemark.subLocality {
+                localityLabel.text = "\(localityLabel.text), \(sub)"
+            }
+            thoroughfareLabel.text = placemark.thoroughfare
+            if let sub = placemark.subThoroughfare {
+                thoroughfareLabel.text = "\(thoroughfareLabel.text), \(sub)"
+            }
             waterLabel.text = placemark.inlandWater
             oceanLabel.text = placemark.ocean
         }
@@ -43,6 +51,8 @@ class PlacemarkViewController: UITableViewController {
             waterLabel.text = nil
             oceanLabel.text = nil
         }
+        
+        self.tableView.reloadData()
     }
     
 }

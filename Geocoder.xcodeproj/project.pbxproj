@@ -11,45 +11,22 @@
 		5B2385261984102F00BEA4B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2385211984102F00BEA4B7 /* Images.xcassets */; };
 		5B2385271984102F00BEA4B7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B2385221984102F00BEA4B7 /* Info.plist */; };
 		5B2385281984102F00BEA4B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2385231984102F00BEA4B7 /* Main.storyboard */; };
-		5B2385291984102F00BEA4B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2385241984102F00BEA4B7 /* ViewController.swift */; };
+		5B2385291984102F00BEA4B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2385241984102F00BEA4B7 /* MapViewController.swift */; };
+		5B23852F1984153900BEA4B7 /* PlacemarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23852E1984153900BEA4B7 /* PlacemarkViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5B23851119840FD900BEA4B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B2384F619840FD900BEA4B7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B2384FD19840FD900BEA4B7;
-			remoteInfo = Geocoder;
-		};
-		5B23852A1984109B00BEA4B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B2384F619840FD900BEA4B7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B2384FD19840FD900BEA4B7;
-			remoteInfo = Geocoder;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5B2384FE19840FD900BEA4B7 /* Geocoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geocoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B23851019840FD900BEA4B7 /* GeocoderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeocoderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2385201984102F00BEA4B7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		5B2385211984102F00BEA4B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		5B2385221984102F00BEA4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		5B2385231984102F00BEA4B7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
-		5B2385241984102F00BEA4B7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = SOURCE_ROOT; };
+		5B2385241984102F00BEA4B7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = SOURCE_ROOT; };
+		5B23852E1984153900BEA4B7 /* PlacemarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacemarkViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5B2384FB19840FD900BEA4B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B23850D19840FD900BEA4B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				5B2384FE19840FD900BEA4B7 /* Geocoder.app */,
-				5B23851019840FD900BEA4B7 /* GeocoderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +58,8 @@
 				5B2385221984102F00BEA4B7 /* Info.plist */,
 				5B2385231984102F00BEA4B7 /* Main.storyboard */,
 				5B2385201984102F00BEA4B7 /* AppDelegate.swift */,
-				5B2385241984102F00BEA4B7 /* ViewController.swift */,
+				5B2385241984102F00BEA4B7 /* MapViewController.swift */,
+				5B23852E1984153900BEA4B7 /* PlacemarkViewController.swift */,
 				5B2385211984102F00BEA4B7 /* Images.xcassets */,
 			);
 			path = Geocoder;
@@ -108,25 +85,6 @@
 			productReference = 5B2384FE19840FD900BEA4B7 /* Geocoder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5B23850F19840FD900BEA4B7 /* GeocoderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5B23851D19840FD900BEA4B7 /* Build configuration list for PBXNativeTarget "GeocoderTests" */;
-			buildPhases = (
-				5B23850C19840FD900BEA4B7 /* Sources */,
-				5B23850D19840FD900BEA4B7 /* Frameworks */,
-				5B23850E19840FD900BEA4B7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5B23851219840FD900BEA4B7 /* PBXTargetDependency */,
-				5B23852B1984109B00BEA4B7 /* PBXTargetDependency */,
-			);
-			name = GeocoderTests;
-			productName = GeocoderTests;
-			productReference = 5B23851019840FD900BEA4B7 /* GeocoderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,10 +96,6 @@
 				TargetAttributes = {
 					5B2384FD19840FD900BEA4B7 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					5B23850F19840FD900BEA4B7 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 5B2384FD19840FD900BEA4B7;
 					};
 				};
 			};
@@ -159,7 +113,6 @@
 			projectRoot = "";
 			targets = (
 				5B2384FD19840FD900BEA4B7 /* Geocoder */,
-				5B23850F19840FD900BEA4B7 /* GeocoderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -175,13 +128,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B23850E19840FD900BEA4B7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -189,32 +135,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B2385291984102F00BEA4B7 /* ViewController.swift in Sources */,
+				5B2385291984102F00BEA4B7 /* MapViewController.swift in Sources */,
+				5B23852F1984153900BEA4B7 /* PlacemarkViewController.swift in Sources */,
 				5B2385251984102F00BEA4B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B23850C19840FD900BEA4B7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5B23851219840FD900BEA4B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5B2384FD19840FD900BEA4B7 /* Geocoder */;
-			targetProxy = 5B23851119840FD900BEA4B7 /* PBXContainerItemProxy */;
-		};
-		5B23852B1984109B00BEA4B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5B2384FD19840FD900BEA4B7 /* Geocoder */;
-			targetProxy = 5B23852A1984109B00BEA4B7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5B23851819840FD900BEA4B7 /* Debug */ = {
@@ -321,40 +248,6 @@
 			};
 			name = Release;
 		};
-		5B23851E19840FD900BEA4B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Geocoder.app/Geocoder";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GeocoderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		5B23851F19840FD900BEA4B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Geocoder.app/Geocoder";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GeocoderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -372,14 +265,6 @@
 			buildConfigurations = (
 				5B23851B19840FD900BEA4B7 /* Debug */,
 				5B23851C19840FD900BEA4B7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		5B23851D19840FD900BEA4B7 /* Build configuration list for PBXNativeTarget "GeocoderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5B23851E19840FD900BEA4B7 /* Debug */,
-				5B23851F19840FD900BEA4B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
