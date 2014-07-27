@@ -15,8 +15,8 @@ class PlacemarkViewController: UITableViewController {
     @IBOutlet var administrationLabel: UILabel!
     @IBOutlet var localityLabel: UILabel!
     @IBOutlet var thoroughfareLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var waterLabel: UILabel!
-    @IBOutlet var oceanLabel: UILabel!
     
     var placemark: CLPlacemark? { didSet { updateLabels() }}
     
@@ -40,16 +40,24 @@ class PlacemarkViewController: UITableViewController {
             if let sub = placemark.subThoroughfare {
                 thoroughfareLabel.text = "\(thoroughfareLabel.text), \(sub)"
             }
+            nameLabel.text = placemark.name
             waterLabel.text = placemark.inlandWater
-            oceanLabel.text = placemark.ocean
+            if let ocean = placemark.ocean {
+                if !waterLabel.text? || waterLabel.text.isEmpty {
+                    waterLabel.text = ocean
+                }
+                else {
+                    waterLabel.text = "\(waterLabel.text), \(ocean)"
+                }
+            }
         }
         else {
             countryLabel.text = nil
             administrationLabel.text = nil
             localityLabel.text = nil
             thoroughfareLabel.text = nil
+            nameLabel.text = nil
             waterLabel.text = nil
-            oceanLabel.text = nil
         }
         
         self.tableView.reloadData()
